@@ -15,6 +15,3 @@ class Product {
         this._img = img
     }
 }
-
-const produto1 = new Produc(category, name);
-}
