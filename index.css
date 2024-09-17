@@ -39,8 +39,19 @@ body{
 
 .post-information {
     text-align: center;
+    font-size: 16px
 }
 
 .post-bottom {
     text-align: center;
+}
+
+.post-bottom button {
+    cursor: pointer;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 16px;
+    border: 1px 1px 1px 1px;
+    padding: 8px 10px;
+    border-color: hsl(14, 86%, 42%);
+    border-radius: 28px;   
 }
