@@ -6,27 +6,34 @@
 
 body{
     font-family: "Red Hat Text", sans-serif;
+    color: hsl(12, 20%, 44%);
+    background-color: hsl(13, 31%, 94%)
     
+}
+
+h1{
+    color: hsl(14, 65%, 9%);
+    font-weight: 600;
 }
 
 .main-container {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens quebrem linha caso o espaço acabe */
     justify-content: center; /* Centraliza os itens no eixo horizontal */
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 15px; /* Espaçamento entre os itens */
 }
 
 .post-container {
     width: 300px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 25px;
-    gap: 15px;
+    height: auto;
+    padding: 0px;
     border-radius: 8px;
 
-    -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
+    -moz-box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
+    box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
 
   }
 
@@ -38,20 +45,37 @@ body{
 }
 
 .post-information {
+    white-space: pre-line;
     text-align: center;
-    font-size: 16px
+    font-size: 16px;
+}
+
+.value{
+    font-weight: 600;
+    color: hsl(14, 86%, 42%);
+}
+
+.name {
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
 }
 
 .post-bottom {
     text-align: center;
+    padding: 30px 30px;
 }
 
 .post-bottom button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-family: "Red Hat Text", sans-serif;
     font-size: 16px;
-    border: 1px 1px 1px 1px;
-    padding: 8px 10px;
-    border-color: hsl(14, 86%, 42%);
+    border: 1px solid hsl(14, 86%, 42%);
+    padding: 8px 20px;
     border-radius: 28px;   
+    width: 80%;
+    margin: 0 auto;
+    
 }
