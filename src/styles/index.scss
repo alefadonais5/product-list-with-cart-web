@@ -68,38 +68,20 @@ h1{
 
 .post-bottom {
     text-align: center;
-    padding: 30px 30px;
+    
 }
 
 .post-bottom button {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-family: "Red Hat Text", sans-serif;
     font-size: 16px;
     border: 1px solid $primary;
-    padding: 8px 20px;
-    border-radius: 28px;   
-    width: 80%;
-    margin: 0 auto;
+    padding: 5px 15px;
+    border-radius: 16px;   
     
 }
 
 
-.container {
-    width: 250px;
-    height: 260px;
-    background-color: grey;
-    position: relative;
-}
-
-.button1{
-    display: inline-block;
-    border-radius: 16px;
-    padding: 5px 15px;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-}

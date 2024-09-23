@@ -31,4 +31,32 @@ export class Product {
         return this._price;
     }
 
+    toHTML() {
+        const postContainer = document.createElement("div");
+        postContainer.className = "post-container";
+        postContainer.id = this._id;
+    
+        const postImage = `
+        <div class="post-image">
+            <img title="${this._name}" src="${this._imageUrl}" alt="${this._name}">
+        </div>`;
+    
+    
+        const postInformation = `
+        <div class="post-information">
+            <span class="category">${this._category}</span>
+            <span class="name">${this._name}</span>
+            <span class="value">$${this._price}</span>
+        </div>`;
+    
+        const postBottom = `
+        <div class="post-bottom">
+            <button><img src="assets/images/icon-add-to-cart.svg" alt="add to cart">Add to Cart</button>
+        </div>`;
+    
+        postContainer.innerHTML = postImage + postInformation + postBottom;
+
+        document.body.appendChild(postContainer); // Certifique-se de que o elemento é anexado corretamente ao DOM
+    }
 }
+
