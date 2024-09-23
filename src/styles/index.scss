@@ -4,15 +4,21 @@
     box-sizing: border-box;
   }
 
+  $primary: hsl(14, 86%, 42%);
+  $rose-400: hsl(7, 20%, 60%);
+  $rose-900: hsl(14, 65%, 9%);
+  $rose-100: hsl(13, 31%, 94%);
+  $rose-50: hsl(20, 50%, 98%); 
+
 body{
     font-family: "Red Hat Text", sans-serif;
-    color: hsl(12, 20%, 44%);
-    background-color: hsl(13, 31%, 94%);
+    color: $rose-400;
+    background-color: $rose-100;
     
 }
 
 h1{
-    color: hsl(14, 65%, 9%);
+    color: $rose-900;
     font-weight: 600;
 }
 
@@ -31,9 +37,9 @@ h1{
     padding: 0px;
     border-radius: 8px;
 
-    -webkit-box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
-    -moz-box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
-    box-shadow: 10px 10px 29px 0px hsl(14, 25%, 72%);
+    -webkit-box-shadow: 10px 10px 29px 0px $rose-400;
+    -moz-box-shadow: 10px 10px 29px 0px $rose-400;
+    box-shadow: 10px 10px 29px 0px $rose-400;
 
   }
 
@@ -52,12 +58,12 @@ h1{
 
 .value{
     font-weight: 600;
-    color: hsl(14, 86%, 42%);
+    color: $primary;
 }
 
 .name {
     font-weight: 600;
-    color: hsl(14, 65%, 9%);
+    color: $rose-900;
 }
 
 .post-bottom {
@@ -72,10 +78,28 @@ h1{
     cursor: pointer;
     font-family: "Red Hat Text", sans-serif;
     font-size: 16px;
-    border: 1px solid hsl(14, 86%, 42%);
+    border: 1px solid $primary;
     padding: 8px 20px;
     border-radius: 28px;   
     width: 80%;
     margin: 0 auto;
     
+}
+
+
+.container {
+    width: 250px;
+    height: 260px;
+    background-color: grey;
+    position: relative;
+}
+
+.button1{
+    display: inline-block;
+    border-radius: 16px;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
