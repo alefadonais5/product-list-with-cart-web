@@ -16,6 +16,7 @@ for (const product of data) {
     newProduct.toHTML();
 }
 
+
 // const product1 = new Product (
 //     data[0].name,
 //     data[0].price,

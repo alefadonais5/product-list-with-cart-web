@@ -58,5 +58,6 @@ export class Product {
 
         document.body.appendChild(postContainer); // Certifique-se de que o elemento é anexado corretamente ao DOM
     }
+    
 }
 
