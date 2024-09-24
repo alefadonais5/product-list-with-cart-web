@@ -15,6 +15,9 @@ export class Product {
         this._imageUrl = imageUrl
     }
 
+    get id(){
+        return this._id;
+    }
     get quantity(){
         return this._quantity;
     }
