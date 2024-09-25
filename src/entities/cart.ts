@@ -1,30 +1,43 @@
 import { Product } from "./product";
 
 export class Cart {
-    private _products: Product [] = [];
-    private _total: number = 0;
+    private static _products: Product [] = [];
+    private static _total: number = 0;
 
 
-    addToCart(product: Product){
+    // static addToCart(product: Product){
 
-        const existingProduct = this._products.find(item => item.name === product.name); //comparação deveria ser pelo o ID, mas ele muda aleatóriamente
+    //     const existingProduct = Cart._products.find(item => item.name === product.name); //comparação deveria ser pelo o ID, mas ele muda aleatóriamente
 
-        if(existingProduct){
+    //     if(existingProduct){
             
-            existingProduct.quantity = product.quantity + 1
-        }else{
-            this._products.push(product); // adiciona o produto ao carrinho
-            product.quantity = 1;
-        }
-        this._total += product.price; //Atualiza o valor da compra
+    //         existingProduct.quantity = product.quantity + 1
+    //     }else{
+    //         Cart._products.push(product); // adiciona o produto ao carrinho
+    //         product.quantity = 1;
+    //     }
+    //     Cart._total += product.price; //Atualiza o valor da compra
         
+    // }
+
+    static addToCart(product: Product){
+        //Atualiza o valor da compra
+        this._total += product.total
+
+        // Adiciona o produto ao carrinho
+        this._products.push(product);
+       
+        
+        //const existingProduct = this._products.findIndex(item => item.name === product.name);
+        //verifica se o produto existe no carrinho;
+        // Se caso existir, sobrescrever o valor
     }
 
-    get products(){
+    static get products(){
         return this._products;
     }
 
-    get total(){
+    static get total(){
         return this._total;
     }
 }
