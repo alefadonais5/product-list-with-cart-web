@@ -34,6 +34,7 @@ export class Product {
         
     }
 
+
     get total(){
         return this._total
     }

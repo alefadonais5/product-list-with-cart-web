@@ -25,14 +25,18 @@ const product1 = new Product (
 );
 
 const banana = new Product("Banana", 10, "Fruta", "htpp:image5.com")
+const uva = new Product("Uva", 5, "Fruta", "htpp:image5.com")
 
-console.log(banana);
 banana.incrementQuantity();
 banana.incrementQuantity();
 banana.incrementQuantity();
-console.log(banana);
-console.log(Cart.products);
-console.log(Cart.products.length);
+uva.incrementQuantity();
+uva.incrementQuantity();
+
+console.log(Cart);
+Cart.removerProduct(banana);
+console.log(Cart);
+
 
 
 
