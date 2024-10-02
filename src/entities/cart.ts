@@ -35,9 +35,32 @@ export class Cart {
         //Atualiza o valor da compra
         this.calculateTotal();
 
+        //Atualiza o carrinho de compra no HTML
+        this.toHtml();
+
     }
 
-   
+  static toHtml(){
+    const cartHTML = document.getElementById("cart");
+
+    if(!cartHTML) return;
+
+    const quantityTotalHTML = cartHTML.firstElementChild?.firstElementChild;
+
+    if(!quantityTotalHTML) return;
+
+    quantityTotalHTML.innerHTML = this._quantityTotal.toString();
+
+    const cartListHTML = cartHTML.querySelector("li");
+
+    if(!cartListHTML) return;
+
+    cartListHTML.innerHTML = "";
+
+    for (const product of this._products) {
+        
+    }
+  } 
 
 
 
