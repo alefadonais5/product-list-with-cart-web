@@ -5,24 +5,24 @@ import { Product } from "./entities/product"
 
 const cart = new Cart();
 
-// for (const product of data) {
+for (const product of data) {
 
-//     const newProduct = new Product (
-//         product.name, 
-//         product.price, 
-//         product.category, 
-//         product.image.desktop);
+    const newProduct = new Product (
+        product.name, 
+        product.price, 
+        product.category, 
+        product.image.desktop);
     
-//     newProduct.toHTML();
-// }
+    newProduct.toHTML();
+}
 
 
-const product1 = new Product (
-    data[0].name,
-    data[0].price,
-    data[0].category,
-    data[0].image.desktop
-);
+// const product1 = new Product (
+//     data[0].name,
+//     data[0].price,
+//     data[0].category,
+//     data[0].image.desktop
+// );
 
 const banana = new Product("Banana", 10, "Fruta", "htpp:image5.com")
 const uva = new Product("Uva", 5, "Fruta", "htpp:image5.com")
