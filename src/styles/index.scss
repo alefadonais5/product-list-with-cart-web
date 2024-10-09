@@ -16,90 +16,88 @@
   $rose-50: hsl(20, 50%, 98%); 
   $foot: hsl(228, 45%, 44%); 
 
-body{
+  body {
+    background-color: #fefaf6;
     font-family: "Red Hat Text", sans-serif;
-    color: $rose-400;
-    background-color: $rose-100;
-    
-}
-
-h1{
-    color: $rose-900;
-    font-weight: 600;
-}
-
-
-.main-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha caso o espaço acabe */
-    justify-content: center; /* Centraliza os itens no eixo horizontal */
-    gap: 15px; /* Espaçamento entre os itens */
-}
-
-.post-container {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding: 0px;
-    border-radius: 8px;
-
-    -webkit-box-shadow: 10px 10px 29px 0px $rose-400;
-    -moz-box-shadow: 10px 10px 29px 0px $rose-400;
-    box-shadow: 10px 10px 29px 0px $rose-400;
-
+    color: hsl(7, 20%, 60%);
   }
   
-
-.post-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  h1 {
+    color: hsl(14, 65%, 9%);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-list li {
+    background-color: white;
     border-radius: 8px;
-    // border: 1px solid $primary;
-    
-}
-
-.post-information {
-    white-space: pre-line;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-list .product-category {
+    font-size: 14px;
+    color: hsl(7, 20%, 60%);
+  }
+  
+  .product-list .product-name {
     font-size: 16px;
-}
-
-.value{
-    font-weight: 600;
-    color: $primary;
-}
-
-.name {
-    font-weight: 600;
-    color: $rose-900;
-}
-
-.post-bottom {
-    text-align: center;
-    
-}
-
-.post-bottom button {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
+    font-weight: bold;
+    color: hsl(14, 65%, 9%);
+  }
+  
+  .product-list .product-price {
+    font-size: 18px;
+    color: hsl(14, 86%, 42%);
+  }
+  
+  .product-list .button {
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 16px;
-    border: 1px solid $primary;
-    padding: 5px 15px;
-    border-radius: 16px;   
-    
-}
-
-.footer { 
-    font-size: 11px; 
-    text-align: center; }
-    
-.footer a { 
-    color: $foot; 
-}
-
+    text-align: center;
+  }
+  
+  #cart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #cart li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  #cart-total-price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
 

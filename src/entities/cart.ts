@@ -40,27 +40,34 @@ export class Cart {
 
     }
 
-  static toHtml(){
-    const cartHTML = document.getElementById("cart");
-
-    if(!cartHTML) return;
-
-    const quantityTotalHTML = cartHTML.firstElementChild?.firstElementChild;
-
-    if(!quantityTotalHTML) return;
-
-    quantityTotalHTML.innerHTML = this._quantityTotal.toString();
-
-    const cartListHTML = cartHTML.querySelector("li");
-
-    if(!cartListHTML) return;
-
-    cartListHTML.innerHTML = "";
-
-    for (const product of this._products) {
-        
+    static toHtml() {
+        const cartListHTML = document.getElementById("cart-list");
+        const cartTotalItemsHTML = document.getElementById("cart-total-items");
+        const cartTotalPriceHTML = document.getElementById("cart-total-price");
+    
+        if (!cartListHTML || !cartTotalItemsHTML || !cartTotalPriceHTML) return;
+    
+        cartListHTML.innerHTML = "";
+        let totalItems = 0;
+    
+        for (const product of this._products) {
+            const liHTML = document.createElement("li");
+            liHTML.innerHTML = `
+                <span>${product.name}</span>
+                <div>
+                    <span>${product.quantity}x</span>
+                    <span>@$${product.price.toFixed(2)}</span>
+                    <span>$${product.total.toFixed(2)}</span>
+                </div>
+            `;
+    
+            cartListHTML.appendChild(liHTML);
+            totalItems += product.quantity;
+        }
+    
+        cartTotalItemsHTML.textContent = totalItems.toString();
+        cartTotalPriceHTML.textContent = `$${this._orderTotal.toFixed(2)}`;
     }
-  } 
 
 
 

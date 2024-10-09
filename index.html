@@ -17,38 +17,30 @@
   <header>
     <h1>Desserts</h1>
   </header>
-  <main class="main-container">
-      <div class="post-container" class="grid grid-cols-3">
-        <div class="product">
-          <!-- Os produtos serão inseridos aqui dinamicamente pelo JavaScript -->
-        </div>
+  <main class="main-container flex p-12 gap-6">
+    <!-- Lista de Produtos -->
+    <section class="product-list flex flex-col ">
+      <!-- Os produtos serão inseridos aqui dinamicamente -->
+      <ul id="product-list" class="grid grid-cols-3 gap-6"></ul>
+    </section>
+  
+    <!-- Componente `Cart` -->
+    <section id="cart" class="bg-white h-fit p-5 border border-black">
+      <h2>Your Cart (<span id="cart-total-items">0</span>)</h2>
+      <ul id="cart-list" class="my-4"></ul>
+      
+      <div class="flex justify-between mt-4">
+        <span>Order Total</span>
+        <span id="cart-total-price">$0.00</span>
       </div>
       
-      <!-- Componente `Cart` -->
-    <div id="cart" class="bg-white h-fit p-5 border border-black">
-      <h2>Your Cart (<span>0</span>)</h2>
-      <lu></lu>
-      <!-- <ul>
-        <li>
-          <span>1x</span>
-          <span>@$5.50</span>
-          <span>$5.50</span>
-        </li>
-        <li>
-          <span>4x</span>
-          <span>@$7.00</span>
-          <span>$28.00</span>
-        </li>
-      </ul>
-
-      <div>
-        <span>Order Total</span>
-        <span>$46.50</span>
-      </div> -->
-    </div>
+      <div class="mt-4">
+        <p class="text-green-500 text-sm">This is a carbon-neutral delivery</p>
+        <button class="bg-orange-600 text-white py-2 px-4 rounded mt-2 w-full">Confirm Order</button>
+      </div>
+    </section>
   </main>
-
-
+  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

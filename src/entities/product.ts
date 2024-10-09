@@ -16,6 +16,33 @@ export class Product {
         this._category = category;
         this._imageUrl = imageUrl
     }
+    toHTML() {
+      const productListHTML = document.getElementById("product-list");
+  
+      if (!productListHTML) return;
+  
+      const productHTML = document.createElement("li");
+      productHTML.id = this._id;
+  
+      productHTML.innerHTML = `
+          <div class="product-card">
+              <img src="${this._imageUrl}" alt="${this._name}" class="product-image"/>
+              <div class="product-details">
+                  <span class="product-category">${this._category}</span>
+                  <h3 class="product-name">${this._name}</h3>
+                  <span class="product-price">$${this._price.toFixed(2)}</span>
+                  <button class="button-add-to-cart">Add to Cart</button>
+              </div>
+          </div>
+      `;
+  
+      productHTML.querySelector(".button-add-to-cart")?.addEventListener("click", () => {
+          this.incrementQuantity();
+          Cart.addToCart(this);
+      });
+  
+      productListHTML.appendChild(productHTML);
+  }
 
     updateTotal(){
         this._total = this._price * this._quantity;
@@ -57,34 +84,6 @@ export class Product {
 
     get price(){
         return this._price;
-    }
-
-    toHTML() {
-        const postContainer = document.createElement("div");
-        postContainer.className = "post-container";
-        postContainer.id = this._id;
-    
-        const postImage = `
-        <div class="post-image">
-            <img title="${this._name}" src="${this._imageUrl}" alt="${this._name}">
-        </div>`;
-    
-    
-        const postInformation = `
-        <div class="post-information">
-            <span class="category">${this._category}</span>
-            <span class="name">${this._name}</span>
-            <span class="value">$${this._price}</span>
-        </div>`;
-    
-        const postBottom = `
-        <div class="post-bottom">
-            <button><img src="assets/images/icon-add-to-cart.svg" alt="add to cart">Add to Cart</button>
-        </div>`;
-    
-        postContainer.innerHTML = postImage + postInformation + postBottom;
-
-        document.body.appendChild(postContainer); 
     }
     
 }
