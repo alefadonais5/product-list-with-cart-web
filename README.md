@@ -38,6 +38,9 @@ Um projeto de lista de produtos com carrinho de compras, desenvolvido com TypeSc
    ```
 5. Acesse no navegador o endereço indicado no terminal.
 
+## Acesse a aplicação:
+   - [Clique Aqui](https://product-list-ht53dpdij-alefs-projects-9b27b72c.vercel.app/).
+
 ## Funcionalidades
 - Lista de produtos carregados via JSON.
 - Adição e remoção de produtos do carrinho.
